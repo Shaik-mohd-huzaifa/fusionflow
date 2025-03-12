@@ -29,32 +29,32 @@ const Index = () => {
     }
   }, [hasCredentials]);
   
-  // If no credentials, show the connection prompt
-  if (!hasCredentials) {
-    return (
-      <div className="h-screen w-screen overflow-hidden flex flex-col">
-        {/* Header */}
-        <motion.header
-          initial={{ y: -50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ delay: 0.2, duration: 0.5 }}
-          className="h-14 border-b border-border flex items-center justify-between px-4 bg-background/70 backdrop-blur-lg z-10"
-        >
-          <div className="flex items-center gap-2">
-            <div className="bg-primary text-primary-foreground p-1.5 rounded">
-              <Workflow className="h-5 w-5" />
-            </div>
-            <h1 className="font-semibold tracking-tight">FusionFlow</h1>
-          </div>
-        </motion.header>
+  // // If no credentials, show the connection prompt
+  // if (!hasCredentials) {
+  //   return (
+  //     <div className="h-screen w-screen overflow-hidden flex flex-col">
+  //       {/* Header */}
+  //       <motion.header
+  //         initial={{ y: -50, opacity: 0 }}
+  //         animate={{ y: 0, opacity: 1 }}
+  //         transition={{ delay: 0.2, duration: 0.5 }}
+  //         className="h-14 border-b border-border flex items-center justify-between px-4 bg-background/70 backdrop-blur-lg z-10"
+  //       >
+  //         <div className="flex items-center gap-2">
+  //           <div className="bg-primary text-primary-foreground p-1.5 rounded">
+  //             <Workflow className="h-5 w-5" />
+  //           </div>
+  //           <h1 className="font-semibold tracking-tight">FusionFlow</h1>
+  //         </div>
+  //       </motion.header>
         
-        {/* Connection prompt */}
-        <div className="flex-1 flex items-center justify-center p-4">
-          <InformaticaPrompt onSuccess={() => setHasCredentials(true)} />
-        </div>
-      </div>
-    );
-  }
+  //       {/* Connection prompt */}
+  //       <div className="flex-1 flex items-center justify-center p-4">
+  //         <InformaticaPrompt onSuccess={() => setHasCredentials(true)} />
+  //       </div>
+  //     </div>
+  //   );
+  // }
   
   return (
     <div className="h-screen w-screen overflow-hidden flex flex-col">
